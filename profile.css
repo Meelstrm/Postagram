@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fdf9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Sidebar och main-content ligger bredvid varandra */
+    min-height: 100vh;
+    width: 100%; /* Se till att container fyller hela bredden */
+    background-color: #fdf9f9;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #fdf9f9;
+    border-right: 1px solid #ddd;
+    padding: 20px; /* Lägg till padding för att ge utrymme åt innehållet */
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff; /* Valfri bakgrundsfärg för innehållet */
+    margin-left: 20px; /* Ger lite avstånd mellan sidebar och innehåll */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Liten skugga för bättre visuell effekt */
+}
+
+h2 {
+    text-align: center; /* Centrerar rubriken */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin-bottom: 20px;
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+}
+
+.profile form {
+    display: flex;
+    flex-direction: column; /* Säkerställer att alla element staplas vertikalt */
+    gap: 15px; /* Avstånd mellan input-fälten */
+}
+
+.input-place {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-place label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-place input, .input-place textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-place input:focus, .input-place textarea:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+}
+
+.input-place textarea {
+    resize: none;
+    height: 100px; /* Höjd på textrutan */
+}
+
+.submit-button {
+    text-align: center;
+}
+
+.submit-button button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.submit-button button:hover {
+    background-color: #45a049;
+}
+
+/* Styling för logga */
+.logga {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+hr {
+    margin: 10px;
+}
+
+/* Sidebar-navigering */
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    color: chocolate;
+    font-size: larger;
+}
+
+.sidebar nav ul li i {
+    margin-right: 10px;
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Sidebar och main-content hamnar ovanpå varandra */
+    }
+
+    .main-content {
+        margin-left: 0; /* Ta bort vänstermarginal på små skärmar */
+        margin-top: 20px; /* Lite avstånd ovanför main-content */
+    }
+}
